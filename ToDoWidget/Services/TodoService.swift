@@ -28,15 +28,15 @@ final class TodoService {
         return result
     }
     
-    // MARK: func
+    // MARK: - Functions
     
-    // getAllTodos
+    // MARK: - getAllTodos
     func getAllTodos() async throws -> [Todo] {
         let todos: [Todo] = try await fetch(endpoint: "todos/")
         return todos
     }
     
-    // getTodo
+    // MARK: - getTodo
     func getTodo(id: Int) async throws -> Todo {
         let todo: Todo = try await fetch(endpoint: "todos/\(id)")
         return todo

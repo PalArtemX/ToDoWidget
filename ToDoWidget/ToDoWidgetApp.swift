@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ToDoWidgetApp: App {
+    
+    @StateObject var vm = TodoViewModel()
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(vm)
         }
     }
 }
