@@ -37,6 +37,7 @@ struct MediumSizeView: View {
             Image(systemName: "list.dash")
                 .symbolRenderingMode(.hierarchical)
         }
+        .widgetURL(URL(string: "myapp://todo/1"))
 
     }
 }

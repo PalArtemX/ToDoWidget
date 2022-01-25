@@ -29,6 +29,24 @@ struct HomeView: View {
             .sheet(item: $vm.selectedTodo, onDismiss: nil) { todo in
                 TodoView(todo: todo)
             }
+            .onOpenURL { url in
+                guard
+                    url.scheme == "myapp",
+                    url.host == "todo",
+                    let id = Int(url.pathComponents[1]) else {
+                        return
+                    }
+                Task {
+                    do {
+                        let todo = try await TodoService.shared.getTodo(with: id)
+                        DispatchQueue.main.async {
+                            vm.selectedTodo = todo
+                        }
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
         }
     }
 }

@@ -23,20 +23,22 @@ struct LargeSizeView: View {
             .padding()
             
             ForEach(0..<6, id: \.self) { _ in
-                HStack {
-                    Circle()
-                        .stroke(lineWidth: 2)
-                        .frame(width: 30, height: 30)
-                        .overlay {
-                            if true {
-                                Image(systemName: "chekmark")
+                Link(destination: URL(string: "myapp://todo/1")!, label: {
+                    HStack {
+                        Circle()
+                            .stroke(lineWidth: 2)
+                            .frame(width: 30, height: 30)
+                            .overlay {
+                                if true {
+                                    Image(systemName: "chekmark")
+                                }
                             }
-                        }
-                    
-                    Text("todo title")
-                    
-                    Spacer()
-                }
+                        
+                        Text("todo title")
+                        
+                        Spacer()
+                    }
+                })
                 .padding(.horizontal)
                 
                 Divider()
