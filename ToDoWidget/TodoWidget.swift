@@ -35,9 +35,9 @@ struct TodoWidget: Widget {
 struct TodoWidget_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TodoWidgetEntryView(entry: SimpleEntry(date: Date()))
+            TodoWidgetEntryView(entry: SimpleEntry(date: Date(), todos: [.placeholder(0)]))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
-            TodoWidgetEntryView(entry: SimpleEntry(date: Date()))
+            TodoWidgetEntryView(entry: SimpleEntry(date: Date(), todos: [.placeholder(1)]))
                 .previewContext(WidgetPreviewContext(family: .systemLarge))
         }
     }

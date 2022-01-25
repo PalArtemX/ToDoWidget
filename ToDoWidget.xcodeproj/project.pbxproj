@@ -26,6 +26,8 @@
 		F834C6E5279C94AC00680B09 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834C6E4279C94AC00680B09 /* WidgetView.swift */; };
 		F834C6E7279D756600680B09 /* MediumSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834C6E6279D756600680B09 /* MediumSizeView.swift */; };
 		F834C6E9279D758700680B09 /* LargeSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834C6E8279D758700680B09 /* LargeSizeView.swift */; };
+		F84E762B27A07AED00EEE6E3 /* TodoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834C6C1279C6BA200680B09 /* TodoService.swift */; };
+		F84E762C27A07B1C00EEE6E3 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F834C6BE279C687400680B09 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,7 +323,9 @@
 				F834C6E3279C947B00680B09 /* SimpleEntry.swift in Sources */,
 				F834C6E1279C943B00680B09 /* Provider.swift in Sources */,
 				F834C6E7279D756600680B09 /* MediumSizeView.swift in Sources */,
+				F84E762C27A07B1C00EEE6E3 /* Todo.swift in Sources */,
 				F834C6E9279D758700680B09 /* LargeSizeView.swift in Sources */,
+				F84E762B27A07AED00EEE6E3 /* TodoService.swift in Sources */,
 				F834C6E5279C94AC00680B09 /* WidgetView.swift in Sources */,
 				F834C6D5279C82F500680B09 /* TodoWidget.swift in Sources */,
 			);

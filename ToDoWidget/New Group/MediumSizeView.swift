@@ -21,13 +21,15 @@ struct MediumSizeView: View {
                     .foregroundColor(.secondary)
                 Divider()
                 
-                VStack {
-                    Text("todo title")
-                        .font(.headline)
-                    
-                    Image(systemName: "checkmark.circle")
-                        .symbolRenderingMode(.hierarchical)
-                        .foregroundColor(.green)
+                if let todo = entry.todos.first {
+                    VStack {
+                        Text(todo.title)
+                            .font(.headline)
+                        
+                        Image(systemName: todo.completed ? "checkmark.circle" : "circle")
+                            .symbolRenderingMode(.hierarchical)
+                            .foregroundColor(.green)
+                    }
                 }
                 
                 Spacer()
@@ -37,7 +39,7 @@ struct MediumSizeView: View {
             Image(systemName: "list.dash")
                 .symbolRenderingMode(.hierarchical)
         }
-        .widgetURL(URL(string: "myapp://todo/1"))
+        .widgetURL(URL(string: "myapp://todo/\(entry.todos.first?.id ?? 0)"))
 
     }
 }

@@ -29,7 +29,6 @@ final class TodoService {
     }
     
     // MARK: - Functions
-    
     // MARK: - getAllTodos
     func getAllTodos() async throws -> [Todo] {
         let todos: [Todo] = try await fetch(endpoint: "todos/")
